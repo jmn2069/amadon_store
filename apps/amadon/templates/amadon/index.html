@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon Store</title>
+</head>
+<body>
+    <h1>Welcome to the Amadon Store!</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Drone</td>
+                <td>$59.99</td>
+                <td><form action='/process' method='post'>
+                    {% csrf_token %}
+                    <select name='quantity'>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name="product_id" value="10">
+                    <input type="submit" value="Purchase">
+                  </form></td>
+            </tr>
+            <tr>
+                <td>Props</td>
+                <td>$5.99</td>
+                <td><form action='/process' method='post'>
+                    {% csrf_token %}
+                    <select name='quantity'>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name="product_id" value="20">
+                    <input type="submit" value="Purchase">
+              </form></td>
+            </tr>
+            <tr>
+                <td>Motors</td>
+                <td>$15.99</td>
+                <td><form action='/process' method='post'>
+                    {% csrf_token %}
+                    <select name='quantity'>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name="product_id" value="30">
+                    <input type="submit" value="Purchase">
+                  </form></td>
+            </tr>
+            <tr>
+                <td>ECM Board</td>
+                <td>$19.99</td>
+                <td><form action='/process' method='post'>
+                    {% csrf_token %}
+                    <select name='quantity'>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name="product_id" value="40">
+                    <input type="submit" value="Purchase">
+                  </form></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
